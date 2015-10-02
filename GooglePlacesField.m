@@ -58,7 +58,7 @@ static CGFloat PredictionTableAnimationLength = 0.35;
     [self hideSpinner];
     
     self.placeClient = [GMSPlacesClient sharedClient];
-    self.boldPredictionFont = kHPFontSemiBold(self.font.pointSize);
+    self.boldPredictionFont = [UIFont boldSystemFontOfSize:self.font.pointSize];
     [self attachToNotifications];
     [self setupPredictionsTable];
 }
