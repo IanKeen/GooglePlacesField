@@ -129,6 +129,8 @@ static CGFloat PredictionTableAnimationLength = 0.35;
     return frame;
 }
 -(void)showPredictions:(NSArray *)predictions {
+    if (![self isFirstResponder]) { return; }
+    
     [self.predictionTable updateList:predictions];
     if (self.predictionTable.superview != nil) { return; }
     
